@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biotimer</title>
+    <link rel="stylesheet" href="biotimer.css">
+</head>
+<body>
+    <div class="flex">
+        <div class="left">
+            <div id="timer">
+                <img id="timer-background">
+                <span id="timer-text">00.00</span>
+            </div>
+            <div id="deltat">
+                <span id="deltat-text">+0.0</span>
+            </div>
+        </div>
+        <div class="right">
+            <div id="counter">
+                <span id="counter-text">0</span>
+            </div>
+            <div id="controls">
+                <div id="settings">
+                    <div>计时间隔: <input type="number" id="timer-inverval" value="50"></div>
+                    <div>最大计数: <input type="number" id="counter-max" value="10"></div>
+                    <div>自动下一个: <input type="checkbox" id="auto-continue"></div>
+                    <div>图片: <input type="file" multiple id="background-files"><a id="clear-background-files">X</a></div>
+                </div>
+
+                <div id="actions">
+                    <button id="start">开始</button>
+                    <button id="pause">暂停</button>
+                    <button id="resume">继续</button>
+                    <button id="stop">停止</button>
+                    <button id="prev">上一个</button>
+                    <button id="next">下一个</button>
+                    <button id="fullscreen">全屏</button>
+                    <button id="reset">重置</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="biotimer.js" defer></script>
+</body>
+</html>

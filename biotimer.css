@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'Leslie Regular';
+    src: url('leslie-regular.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.left {
+    border-right: 1px solid #ccc;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.right {
+    width: 400px;
+}
+
+#timer {
+    width: 100%;
+    height: 100%;
+
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    overflow: hidden;
+}
+
+#timer > #timer-text {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    font-size: 60vh;
+    font-weight: bold;
+    color: #f99;
+    font-family: 'Leslie Regular';
+}
+
+#timer > #timer-background {
+    display: none;
+}
+
+#timer.with-image > #timer-text {
+    top: calc(100% - 30vh);
+    font-size: 30vh;
+}
+
+#timer.with-image > #timer-background {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#deltat {
+    width: 100%;
+    height: 200px;
+
+    position: relative;
+}
+
+#deltat > #deltat-text {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    font-size: 15vh;
+    font-weight: bold;
+    color: #ee7;
+    font-family: 'Leslie Regular';
+}
+
+#deltat.positive > #deltat-text {
+    color: #6f6;
+}
+
+#deltat.negative > #deltat-text {
+    color: #f99;
+}
+
+#counter {
+    width: 100%;
+    height: 400px;
+    position: relative;
+
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+#counter > #counter-text {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    font-size: 25vh;
+    font-weight: bold;
+    color: #e8e;
+    font-family: 'Leslie Regular';
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+#settings > div {
+    position: relative;
+}
+#settings > div > input {
+    width: 70%;
+    position: absolute;
+    right: 0;
+}
+#settings > div > input[type="checkbox"] {
+    width: 32px;
+    position: absolute;
+    right: calc(70% - 24px);
+}
+#settings > div > a {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    border-radius: 3px;
+    background-color: #ccc;
+    padding: 2px 5px;
+    font-size: 100%;
+    text-decoration: none;
+    color: #444;
+    cursor: default;
+}
+
+#actions {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+#actions > button {
+    --color-1: #ddd;
+    --color-2: #bbb;
+    --color: #000;
+
+    background-color: var(--color-1);
+    border: none;
+    border-bottom: 4px solid var(--color-2);
+    color: var(--color);
+    font-size: 20px;
+
+    width: 135px;
+    height: 80px;
+    margin: 5px 10px;
+}
+
+#actions > button#start {
+    --color-1: #6f6;
+    --color-2: #3c3;
+    --color: #000;
+}
+
+#actions > button#pause {
+    --color-1: #ff8;
+    --color-2: #cc5;
+    --color: #000;
+}
+
+#actions > button#resume {
+    --color-1: #6f6;
+    --color-2: #3c3;
+    --color: #000;
+}
+
+
+#actions > button#stop {
+    --color-1: #f99;
+    --color-2: #c66;
+    --color: #000;
+}
+
+#actions > button#reset {
+    --color-1: #e8e;
+    --color-2: #b5b;
+    --color: #000;
+}
+
+#actions > button#prev {
+    --color-1: #69f;
+    --color-2: #36c;
+    --color: #000;
+}
+
+#actions > button#next {
+    --color-1: #69f;
+    --color-2: #36c;
+    --color: #000;
+}
+
+#actions > button#fullscreen {
+    --color-1: #69f;
+    --color-2: #36c;
+    --color: #000;
+}
+    
